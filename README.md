@@ -5,8 +5,8 @@
 https://github.com/hktalent/ChatGPT-API/releases
 
 ```
-wget -c https://github.com/hktalent/ChatGPT-API/releases/download/0.0.1/ChatGPT_0.0.1_macOS_amd64.zip
-unzip -x ChatGPT_0.0.1_macOS_amd64.zip
+wget -c https://github.com/hktalent/ChatGPT-API/releases/download/0.0.3/ChatGPT_0.0.3_macOS_amd64.zip
+unzip -x ChatGPT_0.0.3_macOS_amd64.zip
 ./ChatGPT -i -k [your key]
 
 ```
@@ -40,7 +40,7 @@ func main() {
 	if *key != "" {
 		if *interact {
 			buf := bufio.NewScanner(os.Stdin)
-			for {
+			for buf.Scan() {
 				s := buf.Text()
 				x1 := strings.TrimSpace(strings.ToLower(s))
 				if x1 == "exit" || x1 == "quit" || x1 == "q" || x1 == "x" {
@@ -48,8 +48,6 @@ func main() {
 				}
 				if "" != s {
 					doOne(s, *key)
-				} else {
-					break
 				}
 				if nil != buf.Err() {
 					break
@@ -60,5 +58,6 @@ func main() {
 		}
 	}
 }
+
 
 ```
