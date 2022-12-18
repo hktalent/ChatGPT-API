@@ -10,6 +10,9 @@ unzip -x ChatGPT_0.0.3_macOS_amd64.zip
 ./ChatGPT -i -k [your key]
 
 ```
+<img width="700" alt="Screenshot 2022-12-18 at 18 10 56" src="https://user-images.githubusercontent.com/18223385/208293150-c7a18250-6ce5-41aa-99de-cd105e95eaf1.png">
+
+<img src=https://user-images.githubusercontent.com/18223385/208293119-45384470-56ec-4e53-ab0a-67bf524a81bf.gif width=500>
 
 # Example
 ```go
