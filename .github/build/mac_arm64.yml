@@ -1,0 +1,26 @@
+env:
+  - GO111MODULE=on
+#before:
+#  hooks:
+#    - go mod tidy
+project_name: ChatGPT
+builds:
+  - id: ChatGPT-darwin
+    ldflags:
+      - -s -w
+    binary: ChatGPT
+    env:
+      - CGO_ENABLED=1
+    main: cmd/main.go
+    goos:
+      - darwin
+    goarch:
+      - arm64
+
+archives:
+- format: zip
+  replacements:
+      darwin: macOS
+
+checksum:
+  name_template: "{{ .ProjectName }}-mac-arm64-checksums.txt"
