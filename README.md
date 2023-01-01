@@ -1,6 +1,11 @@
 # ChatGPT-API
 
 # How use
+
+```
+curl -XPOST -v -H "user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0" 'https://51pwn.com/chatGPT?q=介绍支持matrix协议、开源客户端聊天软件'
+```
+
 #### download from release
 https://github.com/hktalent/ChatGPT-API/releases
 
